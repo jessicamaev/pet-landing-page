@@ -38,12 +38,11 @@ a {
     text-decoration: none;
 }
 
-
-.logo {
-    height: 50px;
-    padding-left: 2%;
-}
 /* title */
+
+h1 {
+    color:#57385c;
+}
 
 h4 {
     position: relative;
