@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Pet Landing Page</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Simple lightbox CSS -->
+    <link rel="stylesheet" href="assets/css/simple-lightbox.min.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <img src="/assets/images/logo.png" alt="logo" class="logo">
+
+        <!-- Dark/light theme switcher -->
+
+        <div class="theme-switch">
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <label for="checkbox" class="label">
+                <ion-icon name="partly-sunny-outline" class="sun"></ion-icon>
+                <ion-icon name="moon-outline" class="moon"></ion-icon>
+                <div class="switcher"></div>
+            </label>
+        </div>
+
+        <!-- Nav items -->
+
+        <ul>
+            <li class="nav-item">
+                <a href="#about" class="nav-link" id="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link" id="nav-link">Contact</a>
+            </li>
+        </ul>
+
+        <!-- Bars -->
+
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+
+    <section class="hero">
+        <div class="intro-text">
+            <h4 data-text="Visual Studio Code Pets">
+            </h4>
+            <p>
+                A pet for coders. Developed by <a href="https://tonybaloney.github.io/vscode-pets/">Anthony Shaw</a>,
+                these pets will keep you company and entertained while you code. Your pets can enjoy roaming a castle or
+                exploring a forest. They also have their own
+                pet-friends to keep them company.</p>
+            <a class="btn"
+                href="https://marketplace.visualstudio.com/items?itemName=tonybaloney.vscode-pets&WT.mc_id=python-17801-anthonyshaw">Learn
+                More</a>
+        </div>
+        <div class="location">
+            <img width="560" height="315" src="assets/images/background-medium.png" alt="castle">
+
+        </div>
+    </section>
+
+    <!-- Forest image section -->
+
+    <section>
+        <div class="forest-image"></div>
+    </section>
+
+    <!-- About section -->
+
+    <section class="about" id="about">
+        <h4 data-text="About">
+        </h4>
+        <div class="intro-text">
+        </div>
+        <div class="location">
+            <p> The cat animations were designed by <a href="https://seethingswarm.itch.io/catset">seethingswarm</a>.
+                The dog media assets for this extension were designed by <a
+                    href="https://nvph-studio.itch.io/dog-animation-4-different-dogs">NVPH Studio</a>.
+
+                The forest theme was designed by <a
+                    href="https://edermunizz.itch.io/free-pixel-art-forest">edermunizz</a>. The castle assets were
+                created using artwork by GuttyKreum.
+
+                <a href="https://twitter.com/marcduiker">Marc Duiker</a> created the Clippy, Rocky, Zappy, rubber duck,
+                snake, cockatiel, Ferris the crab, and Mod
+                the dotnet bot media assets.
+
+                <a href="https://www.aldeka.net/">Karen Rustad Tölva</a> designed the original concept of Ferris the
+                crab.
+            </p>
+        </div>
+    </section>
+
+    <!-- About section -->
+
+    <section class="pets">
+        <div class="card-pets">
+            <div class="card">
+                <img src="assets/images/black_walk_fast_8fps.gif" alt="pet">
+                <div class="card-text">
+                    <h2><b>Kitten</b></h2>
+                    <p>Luna Lou</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/images/brown_with_ball_8fps.gif" alt="pet">
+                <div class=" card-text">
+                    <h2><b>Puppy</b></h2>
+                    <p>Sammy Joe</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/images/yellow_walk_8fps.gif" alt="pet">
+                <div class="card-text">
+                    <h2><b>Duck</b></h2>
+                    <p>Yellow biscuit</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- contact form -->
+    <section>
+
+        <div class="contact-form" id="contact">
+            <form action="action_page.php">
+
+                <h1>Contact</h1>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">First Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="your name ...">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="your last name ...">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="pet">VS Code Pet</label>
+                    </div>
+                    <div class="col-75">
+                        <select name="pet" id="pet">
+                            <option value="kitten">Kitten</option>
+                            <option value="puppy">Puppy</option>
+                            <option value="duck">Duck</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea name="subject" id="subject" placeholder="comment..." style="height:200px"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <input class="btn" type="submit" value="submit">
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- Footer-->
+    <footer class="site-footer">
+        <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by
+            <a href="https://github.com/jessicamaev">@codewithjessmae</a>.
+        </p>
+    </footer>
+
+    <!-- Web page script -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- Ion icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+</body>
+
+</html>

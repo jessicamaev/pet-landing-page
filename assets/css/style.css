@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+:root {
+    --normal-font: 400;
+    --line-height: 1.7rem;
+    --transition: 0.4s ease-in;
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    transition: var(--transition);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+
+ul li {
+    list-style-type: none;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.logo {
+    height: 50px;
+    padding-left: 2%;
+}
+/* title */
+
+h4 {
+    position: relative;
+    font-size: 5em;
+    letter-spacing:10px;
+    font-family: sans-serif;
+    display:table;
+    margin:40px auto;
+    cursor:pointer;
+    transition:.6s;
+    color: #ec7263;
+}
+h4:before,
+h4:after {
+    content:attr(data-text);
+    transition:.6s;
+}
+h4:before {
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index:-1;
+    text-shadow:
+        0px 0px,
+        0px 0px,
+        0px 0px,
+        0px 0px,
+        0px 0px,
+        0px 0px,
+        0px 0px,
+        0px 0px,
+        0px 0px,
+        0px 0px;
+    -webkit-mask:repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+            mask:repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+}
+h4:hover {
+    transform:translate(-10px,-10px);
+}  
+h4:hover:before {
+    text-shadow:
+        1px 1px,
+        2px 2px,
+        3px 3px,
+        4px 4px,
+        5px 5px,
+        6px 6px,
+        7px 7px,
+        8px 8px,
+        9px 9px,
+        10px 10px;
+}
+
+/* navigation  */
+
+nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 3px 2px #f1f1f1;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.nav-link{
+    font-weight: var(--bold-font);
+    background-color: none;
+}
+
+ul.nav{
+    background: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+
+/* switcher */
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label{
+    width: 50px;
+    height: 29px;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 6px;
+    position: relative;
+}
+
+.switcher{
+    background-color: #fff;
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.moon {
+    color: #ffa502;
+}
+
+.sun {
+    color: #ff4757;
+}
+
+.checkbox:checked + .label .switcher{
+    transform: translateX(24px);
+}
+
+body.dark{
+    background-color: #283739;
+}
+
+body.dark .bar{
+    background-color: #e0e0e0;
+}
+
+body.dark p {
+    color: #fff;
+}
+
+body.dark a {
+    color: #a2c11c;
+}
+
+body.dark h1 {
+    color: #a2c11c;
+}
+
+body.dark h2 {
+    color: #a2c11c;
+}
+
+body.dark h3 {
+    color: #fff;
+}
+
+
+body.dark nav{
+    background-color: #1e272e;
+    box-shadow: 2px 3px 2px #111010;
+}
+
+body.dark ul {
+    background-color: #1e272e;
+}
+
+body.dark .btn {
+    background-color: #a2c11c;
+    color: black;
+
+}
+
+/* containers */
+
+#container {
+    align-items: center;
+    max-width: 1100px;
+    margin: 2rem auto -6rem;
+}
+
+
+/* Hero section */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.9rem;
+    max-width: 1100px;
+    margin: 2rem auto -6rem;
+    padding-bottom: 20vmin;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 0.6rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #57385c;
+    margin-right: 1.5rem;
+
+}
+
+/* forest image */
+
+.forest-image {
+    width: 100%;
+    height: 50vh;
+    background-image: url(/assets/images/background_forest.png);
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+
+/* about */
+
+.about {
+    position: relative;
+    display: flex;
+    height: 50vmin;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 2rem auto -6rem;
+    padding-bottom: 10vmin;
+}
+
+/* pets - make cards the same size ?? */
+
+.card-pets {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-text {
+    padding: 2px 16px;
+}
+
+.card img{
+    width:100%;
+    height:100%;
+}
+
+.pets h2{
+    text-align: center;
+}
+
+.card p{
+    text-align: center;
+    padding: 10px;
+}
+
+/* form */
+
+.contact-form{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #57385c;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* Floating column for labels: 25% width */
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+
+
+/* footer */
+
+.site-footer
+{
+    background-color:#26272b;
+    padding:45px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
+    
+}
+
+.copyright-text{
+    text-align: center;
+}
+
+
+/* media queries  */
+
+@media screen and (max-width: 1051px) {
+
+    .hero {
+        flex-direction: column;
+        max-width: 500px;
+        padding: 30px;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    ul {
+        background-color: #fff;
+        flex-direction: column;
+        position: fixed;
+        left: 100%;
+        top: 5rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    ul.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        margin: 2rem 0;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .hero {
+        flex-direction: column;
+        max-width: 500px;
+        padding: 30px;
+    }
+
+    .location img {
+        max-width: 26rem;
+        align-items: center;
+        padding-bottom: 80px;
+    }
+
+    .about {
+        max-width: 100rem;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+    
+
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    }
+}
+
+
+
