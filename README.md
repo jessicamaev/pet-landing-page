@@ -1,7 +1,7 @@
 # SheCodes Pet Landing Page Challenge 2022
 Create a new landing page about a beloved animal companion!
 
-[Visit my landing page here] (https://jessicamaev.github.io/pet-landing-page/)
+[Visit my landing page here](https://jessicamaev.github.io/pet-landing-page/)
 
 # 📖 Challenge Instructions
 This coding challenge is for all the animal lovers out there! We ask you to code your own landing page to tell us all about your pet or pet you'd love to own!
